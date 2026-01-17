@@ -1,4 +1,4 @@
-const API_KEY = "c9d250d877c6bee5f1d5d98f370a3c21";
+const API_KEY = import.meta.env.VITE_API_KEY;
 const BASE_URL="https://gnews.io/api/v4/top-headlines"
 
 
