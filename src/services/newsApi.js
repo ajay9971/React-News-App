@@ -1,5 +1,5 @@
 const API_KEY = import.meta.env.VITE_API_KEY;
-const BASE_URL="https://gnews.io/api/v4/top-headlines"
+const BASE_URL="https://api.allorigins.win/raw?url=https://gnews.io/api/v4/top-headlines"
 
 
 export const fetchNews=async(query="",category="", page=1)=>{
