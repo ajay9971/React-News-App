@@ -1,111 +1,144 @@
 body {
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: #f4f6f8;
+    background: #f8fafc;
 }
 
 .navbar {
-    background: #111827;
+    background:linear-gradient(135deg ,#0f172a, #1e293b);
     color: white;
-    padding: 15px 30px;
+    padding: 18px 16px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border-bottom-left-radius:24px;
+    border-bottom-right-radius: 24px;
+
     
 }
+.nav-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: 8px;
+}
 
-.nav-buttons button {
+.nav-buttons button ,
+.nav-buttons a{
     background: #2563eb;
     color: white;
     border: none;
-    padding: 8px 6px;
-    margin-left: 6px;
-    border-radius: 6px;
-    margin-bottom: 6px;
-
-}
-.nav-buttons a {
-    background: #2563eb;
-    color: white;
-    padding: 8px 6px;
-    margin-right:6px;
-    border-radius: 6px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 14px;
     text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
+.nav-buttons button:hover ,
+.nav-buttons a:hover {
+    background: #1d4ed8;
+    transform: translate(-1px);
+}
 
 .container {
-    padding: 20px;
+    padding: 16px;
     max-width: 1100px;
     margin: auto;
 
 }
+.search-bar {
+    display: flex;
+    gap: 10px;
+    background: white;
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
 
 .search-bar input {
-    padding: 10px;
-    width: 70%;
-    margin-bottom: 6px;
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 15px;
 
 }
 
 .search-bar button {
-    padding: 10px;
-    background: #16a34a;
+    padding: 10px 16px;
+    background: #2563eb;
     color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 18px;
 
 }
 
 .card {
     background: white;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease;
+    padding: 16px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+
 }
-.car:hover{
-    transform: translate(-5px);
-    /* cursor: pointer; */
+.card:hover{
+    transform: translate(-4px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    
 }
 
 .card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 14px;
 }
 
 .fav-btn{
-    padding: 6px;
-    background: rgb(40, 114, 233);
-    cursor: pointer;
-    
-    
+    padding: 8px;
+    background: #2563eb;
+    border: none;
+    color: white;
+    cursor: pointer; 
 }
 .fav-btn:hover{
-    background: rgb(167, 167, 221)
+    background: #1d4ed8;
+
 }
 .dark{
-    background:  #111;
+    background:  #0f172a;
     color:white;
     
 }
 
 .dark .card{
     background: #1f2937;
-    color: white;
+    
+}
+.dark .search-bar{
+    background: #1f2937;
+    
 }
 
 .skeleton{
 
     background: #e5e7eb;
     height: 200px;
-    border-radius: 10px;
+    border-radius: 14px;
     animation: pulse 1.5s infinite;
 }
 
