@@ -26,10 +26,9 @@ export default function NewsCard({ article }) {
             <p>{article.source?.name}</p>
             <a href={article.url} target="_blank" rel="noopener noreferrer">Read more</a>
 
-   <button onClick={handleSave} style={{background:isSaved ? "red" : "#2563eb", color:"white", cursor: isSaved ? "not-allowed" : "pointer" , marginLeft:"6px"}}>
+   <button onClick={handleSave} className={`fav-btn ${isSaved ? "saved":""}`} disabled={isSaved}>
     {  isSaved ? "Saved": "Save"}
    </button>
-
 
         </div>
     );
