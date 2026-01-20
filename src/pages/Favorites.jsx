@@ -31,7 +31,7 @@ useEffect(()=>{
                         <p>{article.source?.name}</p>
                         <a href={article.url} target="_blank" rel="noopener noreferrer">Read more</a>
 
-                        <button onClick={() => removItem(article.url)} style={{background:"blue",color:"white"}}>
+                        <button onClick={() => removItem(article.url)} className="fav-btn">
                             Remove
                         </button>
                     </div>
