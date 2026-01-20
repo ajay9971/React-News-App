@@ -9,7 +9,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className={dark ? "dark" : ""}>
+      <div  id="darkbutton" className={dark ? "dark" : ""}>
 
        <div className="navbar">
           {/* <h2>
